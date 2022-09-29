@@ -11,9 +11,11 @@
         <link rel="stylesheet" href="css/MarkerCluster.css">
         <link rel="stylesheet" href="css/MarkerCluster.Default.css">
         <style>
-        #map {
-            width: 3086px;
-            height: 1717px;
+        html, body, #map {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
         }
         </style>
         <title></title>
@@ -39,15 +41,14 @@
         <script src="data/cidades_5.js"></script>
         <script>
         var map = L.map('map', {
-            zoomControl:true, maxZoom:14, minZoom:1
-        }).fitBounds([[21.523988879183694,-90.9160132330611],[35.069845679183665,-66.55716636938764]]);
+            zoomControl:true, maxZoom:20, minZoom:1
+        }).fitBounds([[25.21503739571431,-83.6435073155101],[28.60150159571428,-77.5537955995919]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
         L.control.locate({locateOptions: {maxZoom: 19}}).addTo(map);
         var bounds_group = new L.featureGroup([]);
         function setBounds() {
-            map.setMaxBounds(map.getBounds());
         }
         function pop_ne_10m_land_0(feature, layer) {
             var popupContent = '<table>\
@@ -117,7 +118,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(211,211,139,1.0)',
-                interactive: true,
+                interactive: false,
             }
         }
         map.createPane('pane_cb_2018_us_state_500k_1');
@@ -125,7 +126,7 @@
         map.getPane('pane_cb_2018_us_state_500k_1').style['mix-blend-mode'] = 'normal';
         var layer_cb_2018_us_state_500k_1 = new L.geoJson(json_cb_2018_us_state_500k_1, {
             attribution: '',
-            interactive: true,
+            interactive: false,
             dataVar: 'json_cb_2018_us_state_500k_1',
             layerName: 'layer_cb_2018_us_state_500k_1',
             pane: 'pane_cb_2018_us_state_500k_1',
@@ -152,7 +153,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(0,231,37,1.0)',
-                interactive: true,
+                interactive: false,
             }
                     break;
                 case '5-10%':
@@ -162,7 +163,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(180,252,37,1.0)',
-                interactive: true,
+                interactive: false,
             }
                     break;
                 case '10-20%':
@@ -172,7 +173,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(252,209,37,1.0)',
-                interactive: true,
+                interactive: false,
             }
                     break;
                 case '20-30%':
@@ -182,7 +183,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(253,173,50,1.0)',
-                interactive: true,
+                interactive: false,
             }
                     break;
                 case '30-40%':
@@ -192,7 +193,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(245,141,70,1.0)',
-                interactive: true,
+                interactive: false,
             }
                     break;
                 case '40-50%':
@@ -202,7 +203,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(231,111,90,1.0)',
-                interactive: true,
+                interactive: false,
             }
                     break;
                 case '50-60%':
@@ -212,7 +213,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(192,58,131,1.0)',
-                interactive: true,
+                interactive: false,
             }
                     break;
                 case '60-70%':
@@ -222,7 +223,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(165,32,152,1.0)',
-                interactive: true,
+                interactive: false,
             }
                     break;
                 case '70-80%':
@@ -232,7 +233,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(134,7,166,1.0)',
-                interactive: true,
+                interactive: false,
             }
                     break;
                 case '80-90%':
@@ -242,7 +243,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(99,0,167,1.0)',
-                interactive: true,
+                interactive: false,
             }
                     break;
                 case '>90%':
@@ -252,7 +253,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(62,4,156,1.0)',
-                interactive: true,
+                interactive: false,
             }
                     break;
                 default:
@@ -262,7 +263,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(62,4,156,1.0)',
-                interactive: true,
+                interactive: false,
             }
                     break;
             }
@@ -272,7 +273,7 @@
         map.getPane('pane_2022092906_wsp34knt120hr_5km_2').style['mix-blend-mode'] = 'normal';
         var layer_2022092906_wsp34knt120hr_5km_2 = new L.geoJson(json_2022092906_wsp34knt120hr_5km_2, {
             attribution: '',
-            interactive: true,
+            interactive: false,
             dataVar: 'json_2022092906_wsp34knt120hr_5km_2',
             layerName: 'layer_2022092906_wsp34knt120hr_5km_2',
             pane: 'pane_2022092906_wsp34knt120hr_5km_2',
@@ -307,9 +308,9 @@
                 dashArray: '',
                 lineCap: 'square',
                 lineJoin: 'bevel',
-                weight: 3.0,
+                weight: 1.0,
                 fillOpacity: 0,
-                interactive: true,
+                interactive: false,
             }
         }
         map.createPane('pane_tl_2019_12_prisecroads_3');
@@ -317,7 +318,7 @@
         map.getPane('pane_tl_2019_12_prisecroads_3').style['mix-blend-mode'] = 'normal';
         var layer_tl_2019_12_prisecroads_3 = new L.geoJson(json_tl_2019_12_prisecroads_3, {
             attribution: '',
-            interactive: true,
+            interactive: false,
             dataVar: 'json_tl_2019_12_prisecroads_3',
             layerName: 'layer_tl_2019_12_prisecroads_3',
             pane: 'pane_tl_2019_12_prisecroads_3',
@@ -354,7 +355,7 @@
                 lineJoin: 'bevel',
                 weight: 3.0,
                 fillOpacity: 0,
-                interactive: true,
+                interactive: false,
             }
         }
         map.createPane('pane_tl_2019_us_primaryroads_4');
@@ -362,7 +363,7 @@
         map.getPane('pane_tl_2019_us_primaryroads_4').style['mix-blend-mode'] = 'normal';
         var layer_tl_2019_us_primaryroads_4 = new L.geoJson(json_tl_2019_us_primaryroads_4, {
             attribution: '',
-            interactive: true,
+            interactive: false,
             dataVar: 'json_tl_2019_us_primaryroads_4',
             layerName: 'layer_tl_2019_us_primaryroads_4',
             pane: 'pane_tl_2019_us_primaryroads_4',
@@ -391,7 +392,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(0,0,0,1.0)',
-                interactive: true,
+                interactive: false,
             }
         }
         map.createPane('pane_cidades_5');
@@ -399,7 +400,7 @@
         map.getPane('pane_cidades_5').style['mix-blend-mode'] = 'normal';
         var layer_cidades_5 = new L.geoJson(json_cidades_5, {
             attribution: '',
-            interactive: true,
+            interactive: false,
             dataVar: 'json_cidades_5',
             layerName: 'layer_cidades_5',
             pane: 'pane_cidades_5',
