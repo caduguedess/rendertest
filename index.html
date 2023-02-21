@@ -1,27 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Welcome to My Website</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE2QmJHzv6Xw7Wq8I6U6S" crossorigin="anonymous">
-    <style>
-      body {
-        background-image: url('https://images.unsplash.com/photo-1513151233558-faf417b73d52');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-      }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Geospatial Services</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- Leaflet CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">My Website</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Geospatial Services</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
@@ -29,7 +44,7 @@
             <a class="nav-link" href="#">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Projects</a>
+            <a class="nav-link" href="#">Services</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Contact</a>
@@ -38,30 +53,20 @@
       </div>
     </nav>
 
-    <div class="container mt-4">
-      <div class="jumbotron">
-        <h1 class="display-4">Welcome to My Website</h1>
-        <p class="lead">Thank you for visiting my website. Here you can find information about my projects, interests, and experiences.</p>
-      </div>
+    <!-- Map container -->
+    <div id="map"></div>
 
-      <div class="row">
-        <div class="col-md-8">
-          <h2>About Me</h2>
-          <p>My name is John Doe and I am a software engineer based in New York. I have a passion for developing innovative solutions that make a positive impact on people's lives. In my free time, I enjoy hiking, photography, and playing the guitar.</p>
-        </div>
-        <div class="col-md-4">
-          <h2>Recent Projects</h2>
-          <ul class="list-group">
-            <li class="list-group-item"><a href="#">Project A</a></li>
-            <li class="list-group-item"><a href="#">Project B</a></li>
-            <li class="list-group-item"><a href="#">Project C</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <hr>
-
-      <footer class="text-center">
-        <p>&copy; 2022 My Website. All rights reserved.</p>
-      </footer>
-    </
+    <!-- Bootstrap JS and jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6Vrj
