@@ -1,29 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My Leaflet Map</title>
-    <meta charset="utf-8" />
+    <title>Welcome to My Website</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" integrity="sha512-8xVL4XQusfEnPyhxbzPYw6Uc/WGy2T1IbT6TkwOarJgak1th9ttzLsV/SOjjwW8dV7gkaYpY+V0q3h1fZV7XZQ==" crossorigin="anonymous" />
-    <style>
-      #mapid { height: 500px; }
-    </style>
   </head>
   <body>
-    <div id="mapid"></div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js" integrity="sha512-eiWvlGvovwjYRf2QNTQQnujxM5XvE5qfgp3q1qaE8w75bPtIfFzECcwViYUSP+8OaA2X4jz4chYYD4aO/01JhQ==" crossorigin="anonymous"></script>
-    <script>
-      var mymap = L.map('mapid').setView([51.505, -0.09], 13);
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: 'Map data © <a href="https://openstreetmap.org">OpenStreetMap</a> contributors',
-        maxZoom: 18,
-        tileSize: 512,
-        zoomOffset: -1
-      }).addTo(mymap);
-
-      L.marker([51.5, -0.09]).addTo(mymap)
-        .bindPopup("<b>Hello world!</b><br />I am a popup.").openPopup();
-    </script>
+    <h1>Welcome to My Website</h1>
+    <p>Thank you for visiting my website. Here you can find information about my projects, interests, and experiences.</p>
+    <h2>About Me</h2>
+    <p>My name is John Doe and I am a software engineer based in New York. I have a passion for developing innovative solutions that make a positive impact on people's lives. In my free time, I enjoy hiking, photography, and playing the guitar.</p>
+    <h2>My Projects</h2>
+    <p>Over the years, I have worked on various software projects, ranging from web applications to mobile apps to embedded systems. Some of my recent projects include:</p>
+    <ul>
+      <li><a href="#">Project A</a>: A web app for managing personal finances</li>
+      <li><a href="#">Project B</a>: A mobile game for learning new languages</li>
+      <li><a href="#">Project C</a>: An embedded system for monitoring environmental conditions</li>
+    </ul>
+    <p>Feel free to explore my website and learn more about my work. If you have any questions or feedback, please don't hesitate to contact me.</p>
   </body>
 </html>
